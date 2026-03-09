@@ -2,6 +2,7 @@
   <div class="logo">
     {{ $path := or .Site.Params.Logo.path "/img/logo-icon.png" }}
     <img src="{{ $path | relURL }}" alt="{{ or .Site.Params.Logo.alt "TestOps Engineering" }}" />
+    <span class="logo__text">{{ with .Site.Params.Logo.logoText }}{{ . }}{{ else }}TestOps Engineering{{ end }}</span>
     <span
       class="logo__cursor"
       style="
