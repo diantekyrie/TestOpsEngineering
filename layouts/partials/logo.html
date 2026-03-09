@@ -1,20 +1,6 @@
 <a href="{{ if .Site.Params.Logo.LogoHomeLink }}{{ .Site.Params.Logo.LogoHomeLink }}{{ else }}{{ .Site.BaseURL | relLangURL }}{{ end }}" style="text-decoration: none;">
   <div class="logo">
-    <span class="logo__mark" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 20 20" role="img" aria-label="TestOps Engineering logo" xmlns="http://www.w3.org/2000/svg">
-        <title>TestOps Engineering</title>
-        <circle cx="10" cy="10" r="7" fill="none" stroke="#3B82F6" stroke-width="2" />
-        <path d="M6 6h8M10 6v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      </svg>
-    </span>
-    <span class="logo__text">{{ with .Site.Params.Logo.logoText }}{{ . }}{{ else }}TestOps Engineering{{ end }}</span>
-    <span
-      class="logo__cursor"
-      style="
-        {{ with.Site.Params.Logo.logoCursorDisabled }}visibility:hidden;{{ end }}
-        {{ with.Site.Params.Logo.logoCursorColor    }}background-color:{{ . }};{{ end }}
-        {{ with.Site.Params.Logo.logoCursorAnimate  }}animation-duration:{{ . }};{{ end }}
-      "
-    ></span>
+    {{ $path := or .Site.Params.Logo.path "/img/logo-icon.png" }}
+    <img src="{{ $path | relURL }}" alt="{{ or .Site.Params.Logo.alt "TestOps Engineering" }}" />
   </div>
 </a>

@@ -20,6 +20,8 @@ enableRobotsTXT = true
 
   [params.logo]
     logoText = "TestOps Engineering"
+    path = "/img/logo-icon.png"
+    alt = "TestOps Engineering"
     logoHomeLink = "/"
 
 [[menu.main]]
