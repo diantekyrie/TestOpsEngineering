@@ -1,0 +1,43 @@
+baseURL = "https://USERNAME.github.io/"
+languageCode = "en-us"
+title = "QA Consulting (Placeholder)"
+theme = "hello-4s3ti"
+paginate = 5
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  homeSubtitle = "Placeholder tagline"
+  disableReadOtherPosts = true
+  enableSharingButtons = false
+
+  description = "QA consulting services: test strategy, automation, and quality engineering."
+  keywords = "qa consulting, software testing, test automation, quality assurance"
+
+  [params.logo]
+    logoText = "QA Consulting"
+    logoHomeLink = "/"
+
+[[menu.main]]
+  identifier = "services"
+  name = "Services"
+  url = "/services/"
+
+[[menu.main]]
+  identifier = "case-studies"
+  name = "Case Studies"
+  url = "/case-studies/"
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact/"
