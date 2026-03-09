@@ -2,5 +2,13 @@
   <div class="logo">
     {{ $path := or .Site.Params.Logo.path "/img/logo-icon.png" }}
     <img src="{{ $path | relURL }}" alt="{{ or .Site.Params.Logo.alt "TestOps Engineering" }}" />
+    <span
+      class="logo__cursor"
+      style="
+        {{ with.Site.Params.Logo.logoCursorDisabled }}visibility:hidden;{{ end }}
+        {{ with.Site.Params.Logo.logoCursorColor    }}background-color:{{ . }};{{ end }}
+        {{ with.Site.Params.Logo.logoCursorAnimate  }}animation-duration:{{ . }};{{ end }}
+      "
+    ></span>
   </div>
 </a>
