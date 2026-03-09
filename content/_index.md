@@ -3,6 +3,10 @@ title = "TestOps Engineering"
 
 +++
 
+<p style="text-align:center; margin: 1.5rem 0;">
+  <img src="/img/logo.png" alt="TestOps Engineering" style="max-width: 720px; width: 100%; height: auto;" />
+</p>
+
 
 ## Test strategy, automation, and quality engineering
 I help teams ship faster with confidence by building pragmatic QA processes, automation frameworks, and release gates that actually work.
