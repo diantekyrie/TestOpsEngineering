@@ -8,7 +8,7 @@ title = "Contact"
   <input type="hidden" name="_subject" value="New QA consulting inquiry" />
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_template" value="table" />
-  <input type="hidden" name="_next" value="https://diantekyrie.github.io/TestOpsEngineering/thanks/" />
+  <input type="hidden" name="_next" value="https://testopseng.com/thanks/" />
 
   <p>
     <label>Name<br />

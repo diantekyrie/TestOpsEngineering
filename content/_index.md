@@ -1,9 +1,10 @@
 +++
-title = "QA Consulting (Placeholder)"
+title = "TestOps Engineering"
+
 +++
 
-## Test strategy, automation, and quality engineering
 
+## Test strategy, automation, and quality engineering
 I help teams ship faster with confidence by building pragmatic QA processes, automation frameworks, and release gates that actually work.
 
 ### What I do

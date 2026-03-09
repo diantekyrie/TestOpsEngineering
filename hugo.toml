@@ -1,6 +1,6 @@
-baseURL = "https://diantekyrie.github.io/TestOpsEngineering/"
+baseURL = "https://testopseng.com/"
 languageCode = "en-us"
-title = "QA Consulting (Placeholder)"
+title = "TestOps Engineering"
 theme = "hello-4s3ti"
 paginate = 5
 enableRobotsTXT = true
@@ -11,15 +11,15 @@ enableRobotsTXT = true
       unsafe = true
 
 [params]
-  homeSubtitle = "Placeholder tagline"
+  homeSubtitle = "Test operations, strategy, and automation"
   disableReadOtherPosts = true
   enableSharingButtons = false
 
-  description = "QA consulting services: test strategy, automation, and quality engineering."
-  keywords = "qa consulting, software testing, test automation, quality assurance"
+  description = "TestOps Engineering: test strategy, automation, CI quality gates, and reliability."
+  keywords = "testops, qa, quality engineering, software testing, test automation, cicd"
 
   [params.logo]
-    logoText = "QA Consulting"
+    logoText = "TestOps Engineering"
     logoHomeLink = "/"
 
 [[menu.main]]
