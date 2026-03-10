@@ -11,6 +11,8 @@ enableRobotsTXT = true
       unsafe = true
 
 [params]
+  defaultTheme = "dark"
+  EnableThemeToggle = false
   homeSubtitle = "Test operations, strategy, and automation"
   disableReadOtherPosts = true
   enableSharingButtons = false
@@ -23,6 +25,7 @@ enableRobotsTXT = true
     path = "/img/logo-icon.png"
     alt = "TestOps Engineering"
     logoHomeLink = "/"
+    logoCursorColor = "currentColor"
 
 [[menu.main]]
   identifier = "services"
