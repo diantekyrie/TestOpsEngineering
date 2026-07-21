@@ -20,7 +20,11 @@
   --body:    var(--font-body), sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+  overflow-x: clip;
+}
 
 body {
   background: var(--bg);
@@ -28,7 +32,6 @@ body {
   font-family: var(--body);
   font-size: 15px;
   line-height: 1.7;
-  overflow-x: hidden;
 }
 
 /* LAYOUT */
