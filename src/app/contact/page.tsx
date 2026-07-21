@@ -29,10 +29,6 @@ export default function Contact() {
             Share your current setup, problems, and timeline. I&apos;ll review and send back a
             scoped recommendation and quote.
           </p>
-          <p className="contact-note">
-            Before publishing: replace <code>YOUR_EMAIL@example.com</code> in the form action
-            with your email.
-          </p>
         </section>
 
         <form
