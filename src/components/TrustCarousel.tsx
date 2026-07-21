@@ -1,5 +1,5 @@
 const companies = [
-  { name: 'Google · Pixel',  logo: '/logos/google.svg' },
+  { name: 'Google',          logo: '/logos/google.svg' },
   { name: 'Meta',            logo: '/logos/meta.svg' },
   { name: 'Apple',           logo: '/logos/apple.svg' },
   { name: 'Samsung',         logo: '/logos/samsung.svg' },

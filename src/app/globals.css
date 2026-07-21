@@ -364,12 +364,13 @@ nav {
   width: auto;
   max-width: 90px;
   object-fit: contain;
-  filter: brightness(0) invert(1) opacity(0.35);
-  transition: filter 0.25s;
+  filter: grayscale(1) brightness(1.9) opacity(0.45);
+  transition: filter 0.35s ease, opacity 0.35s ease;
   display: block;
 }
 .trust-carousel-card:hover .trust-carousel-img {
-  filter: brightness(0) invert(1) opacity(0.75);
+  filter: none;
+  opacity: 0.9;
 }
 
 .trust-carousel-name {

@@ -48,10 +48,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${dmMono.variable} ${instrumentSerif.variable} ${dmSans.variable}`}>
-        {children}
-      </body>
+    <html lang="en" className={`${dmMono.variable} ${instrumentSerif.variable} ${dmSans.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }
