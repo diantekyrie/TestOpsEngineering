@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Deploy static site to Pages
 
 on:
   push:
@@ -21,14 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-depth: 0
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "latest"
-          extended: true
+          fetch-depth: 1
 
       - name: Setup Pages
         id: pages
@@ -36,16 +29,10 @@ jobs:
         with:
           enablement: true
 
-      - name: Build
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: hugo --minify
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: .
 
   deploy:
     needs: build
