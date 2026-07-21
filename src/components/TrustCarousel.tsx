@@ -26,7 +26,6 @@ export default function TrustCarousel() {
                 alt={co.name}
                 className="trust-carousel-img"
               />
-              <span className="trust-carousel-name">{co.name}</span>
             </div>
           ))}
         </div>

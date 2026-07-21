@@ -347,43 +347,29 @@ nav {
 
 .trust-carousel-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 16px 32px;
+  padding: 14px 36px;
   border-right: 1px solid var(--border);
-  min-width: 130px;
+  min-width: 120px;
   transition: background 0.2s;
   cursor: default;
 }
 .trust-carousel-card:hover { background: var(--bg2); }
 
 .trust-carousel-img {
-  height: 36px;
+  height: 44px;
   width: auto;
-  max-width: 90px;
+  max-width: 110px;
   object-fit: contain;
   filter: grayscale(1) brightness(1.9) opacity(0.45);
-  transition: filter 0.35s ease, opacity 0.35s ease;
+  transition: filter 0.35s ease;
   display: block;
 }
 .trust-carousel-card:hover .trust-carousel-img {
   filter: none;
   opacity: 0.9;
 }
-
-.trust-carousel-name {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--text3);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
-  transition: color 0.2s;
-}
-.trust-carousel-card:hover .trust-carousel-name { color: var(--text2); }
 
 @keyframes trust-scroll {
   from { transform: translateX(0); }
