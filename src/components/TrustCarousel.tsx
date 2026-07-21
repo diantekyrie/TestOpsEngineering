@@ -1,32 +1,30 @@
 const companies = [
-  { name: 'Google · Pixel',    domain: 'google.com' },
-  { name: 'Meta',              domain: 'meta.com' },
-  { name: 'Apple',             domain: 'apple.com' },
-  { name: 'Samsung',           domain: 'samsung.com' },
-  { name: 'Hulu',              domain: 'hulu.com' },
-  { name: 'Bank of America',   domain: 'bankofamerica.com' },
-  { name: 'Gap',               domain: 'gap.com' },
-  { name: 'Avid Technology',   domain: 'avid.com' },
+  { name: 'Google · Pixel',  logo: '/logos/google.svg' },
+  { name: 'Meta',            logo: '/logos/meta.svg' },
+  { name: 'Apple',           logo: '/logos/apple.svg' },
+  { name: 'Samsung',         logo: '/logos/samsung.svg' },
+  { name: 'Hulu',            logo: '/logos/hulu.svg' },
+  { name: 'Bank of America', logo: '/logos/bankofamerica.svg' },
+  { name: 'Gap',             logo: '/logos/gap.svg' },
+  { name: 'Avid Technology', logo: '/logos/avid.svg' },
 ]
 
-// Duplicate for seamless infinite loop
+// Duplicate list so the scroll loops seamlessly
 const items = [...companies, ...companies]
 
 export default function TrustCarousel() {
   return (
     <div className="trust-bar">
-      <div className="trust-carousel-label wrap">Engineering background from</div>
-      <div className="trust-carousel-wrap">
+      <p className="trust-bar-label wrap">Engineering background from</p>
+      <div className="trust-carousel-outer">
         <div className="trust-carousel-track">
           {items.map((co, i) => (
-            <div className="trust-carousel-item" key={i}>
+            <div className="trust-carousel-card" key={i} aria-hidden={i >= companies.length}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`https://logo.clearbit.com/${co.domain}`}
+                src={co.logo}
                 alt={co.name}
-                width={22}
-                height={22}
-                className="trust-carousel-logo"
+                className="trust-carousel-img"
               />
               <span className="trust-carousel-name">{co.name}</span>
             </div>
