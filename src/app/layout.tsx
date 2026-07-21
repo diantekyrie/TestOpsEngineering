@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { DM_Mono, Instrument_Serif, DM_Sans } from 'next/font/google'
 import './globals.css'
 
@@ -24,6 +24,12 @@ const dmSans = DM_Sans({
   variable: '--font-body',
   display: 'swap',
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://testopseng.com'),
