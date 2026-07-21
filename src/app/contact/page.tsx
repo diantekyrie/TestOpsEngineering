@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+import Nav from '@/components/Nav'
 
 export const metadata: Metadata = {
   title: 'Contact — TestOps Engineering',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-      <header className="contact-header">
-        <div className="wrap contact-top">
-          <Link className="brand" href="/">
-            <Image src="/test_ops_logo.png" alt="TestOps Engineering logo" width={16} height={16} />
-            TestOps Engineering
-          </Link>
-          <Link className="back" href="/">Back to site</Link>
-        </div>
-      </header>
+      <Nav />
 
       <main className="wrap" style={{ maxWidth: 860 }}>
         <section className="contact-hero">

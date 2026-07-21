@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
+import TrustCarousel from '@/components/TrustCarousel'
 
 export default function Home() {
   return (
@@ -56,21 +57,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <div className="trust-bar">
-        <div className="wrap">
-          <div className="trust-inner">
-            <span className="trust-label">Engineering background from</span>
-            <div className="trust-logos">
-              <span className="trust-logo">Google · Pixel</span>
-              <span className="trust-logo">Meta</span>
-              <span className="trust-logo">Apple</span>
-              <span className="trust-logo">Samsung</span>
-              <span className="trust-logo">Hulu</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* TRUST CAROUSEL */}
+      <TrustCarousel />
 
       {/* WHO IS THIS FOR */}
       <section className="for-section" id="for">

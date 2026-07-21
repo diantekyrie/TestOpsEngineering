@@ -311,47 +311,71 @@ nav {
 }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-/* TRUST BAR */
+/* TRUST CAROUSEL */
 .trust-bar {
-  padding: 24px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.trust-inner {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.trust-label {
+.trust-carousel-label {
   font-family: var(--mono);
   font-size: 10px;
   color: var(--text4);
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.trust-carousel-wrap {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.trust-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: trust-scroll 32s linear infinite;
+}
+.trust-carousel-track:hover { animation-play-state: paused; }
+
+.trust-carousel-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 28px;
+  border-right: 1px solid var(--border);
   white-space: nowrap;
 }
 
-.trust-logos {
-  display: flex;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  justify-content: center;
+.trust-carousel-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) opacity(0.35);
+  transition: filter 0.2s;
+  flex-shrink: 0;
+}
+.trust-carousel-item:hover .trust-carousel-logo {
+  filter: brightness(0) invert(1) opacity(0.75);
 }
 
-.trust-logo {
+.trust-carousel-name {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text3);
-  padding: 4px 12px;
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  letter-spacing: 0.05em;
-  transition: all 0.2s;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
 }
-.trust-logo:hover { color: var(--text2); border-color: var(--border2); }
+.trust-carousel-item:hover .trust-carousel-name { color: var(--text2); }
+
+@keyframes trust-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 
 /* SECTIONS shared */
 section { padding: 88px 0; }
