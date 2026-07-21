@@ -6,7 +6,7 @@ const companies = [
   { name: 'Hulu',            logo: '/logos/hulu.svg' },
   { name: 'Bank of America', logo: '/logos/bankofamerica.svg' },
   { name: 'Gap',             logo: '/logos/gap.svg' },
-  { name: 'Avid Technology', logo: '/logos/avid.svg' },
+  { name: 'Avid Technology', logo: '/logos/avid.png' },
 ]
 
 // Duplicate list so the scroll loops seamlessly
