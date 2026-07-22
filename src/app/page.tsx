@@ -251,7 +251,6 @@ export default function Home() {
                   <span className="chip">CI/CD</span>
                   <span className="chip">Mobile hardware</span>
                 </div>
-                <p className="case-note">* Replace these metrics with your real numbers before going live</p>
               </div>
               <div className="case-stats">
                 <div><span className="cs-num">−86%</span><span className="cs-lbl">Flakiness rate</span></div>
@@ -276,7 +275,6 @@ export default function Home() {
                   <span className="chip">Python</span>
                   <span className="chip">API testing</span>
                 </div>
-                <p className="case-note">* Replace these metrics with your real numbers before going live</p>
               </div>
               <div className="case-stats">
                 <div><span className="cs-num">+61%</span><span className="cs-lbl">API coverage</span></div>
