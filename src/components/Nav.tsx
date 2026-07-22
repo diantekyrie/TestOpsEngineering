@@ -1,14 +1,21 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Nav() {
+  const pathname = usePathname()
+  const isHome = pathname === '/' || pathname === ''
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
 
+  // On non-home pages, prefix section links with '/' so they navigate home first
+  const s = (hash: string) => isHome ? hash : `/${hash}`
+
   useEffect(() => {
+    if (!isHome) return
     const handleScroll = () => {
       const scrollY = window.pageYOffset
       const sections = document.querySelectorAll<HTMLElement>('section[id], div[id]')
@@ -23,7 +30,7 @@ export default function Nav() {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isHome])
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
@@ -44,7 +51,7 @@ export default function Nav() {
   }, [menuOpen])
 
   const navColor = (id: string) =>
-    activeSection === id ? 'var(--accent)' : undefined
+    isHome && activeSection === id ? 'var(--accent)' : undefined
 
   return (
     <nav>
@@ -55,12 +62,15 @@ export default function Nav() {
         </Link>
         <div className="nav-right">
           <ul className="nav-links">
-            <li><a href="#for"      style={{ color: navColor('for') }}>Who it&apos;s for</a></li>
-            <li><a href="#services" style={{ color: navColor('services') }}>Services</a></li>
-            <li><a href="#work"     style={{ color: navColor('work') }}>Work</a></li>
-            <li><a href="#pricing"  style={{ color: navColor('pricing') }}>Pricing</a></li>
+            <li><a href={s('#for')}      style={{ color: navColor('for') }}>Who it&apos;s for</a></li>
+            <li><a href={s('#services')} style={{ color: navColor('services') }}>Services</a></li>
+            <li><a href={s('#work')}     style={{ color: navColor('work') }}>Work</a></li>
+            <li><a href={s('#pricing')}  style={{ color: navColor('pricing') }}>Pricing</a></li>
           </ul>
-          <Link className="nav-cta" href="/contact">Contact</Link>
+          {isHome
+            ? <Link className="nav-cta" href="/contact">Contact</Link>
+            : <Link className="nav-cta" href="/">Home</Link>
+          }
           <button
             className="nav-hamburger"
             onClick={() => setMenuOpen((o) => !o)}
@@ -72,11 +82,14 @@ export default function Nav() {
       </div>
 
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu">
-        <a href="#for"      onClick={() => setMenuOpen(false)}>Who it&apos;s for</a>
-        <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-        <a href="#work"     onClick={() => setMenuOpen(false)}>Work</a>
-        <a href="#pricing"  onClick={() => setMenuOpen(false)}>Pricing</a>
-        <Link href="/contact" className="accent" onClick={() => setMenuOpen(false)}>Contact</Link>
+        <a href={s('#for')}      onClick={() => setMenuOpen(false)}>Who it&apos;s for</a>
+        <a href={s('#services')} onClick={() => setMenuOpen(false)}>Services</a>
+        <a href={s('#work')}     onClick={() => setMenuOpen(false)}>Work</a>
+        <a href={s('#pricing')}  onClick={() => setMenuOpen(false)}>Pricing</a>
+        {isHome
+          ? <Link href="/contact" className="accent" onClick={() => setMenuOpen(false)}>Contact</Link>
+          : <Link href="/" className="accent" onClick={() => setMenuOpen(false)}>Home</Link>
+        }
       </div>
     </nav>
   )
