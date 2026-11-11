@@ -32,6 +32,11 @@ export default function Contact() {
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="https://testopseng.com/thanks" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Thanks for reaching out to TestOps Engineering. Your inquiry came through and I'll review it and reply with next steps or a time for a quick call."
+          />
 
           <div className="form-grid">
             <div className="form-row">
