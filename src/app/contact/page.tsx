@@ -4,7 +4,8 @@ import Nav from '@/components/Nav'
 export const metadata: Metadata = {
   title: 'Contact — TestOps Engineering',
   description: 'Contact TestOps Engineering for a scoped QA consulting quote.',
-  openGraph: { images: [{ url: '/testops_image.png' }] },
+  alternates: { canonical: '/contact' },
+  openGraph: { url: '/contact', siteName: 'TestOps Engineering', images: [{ url: '/testops_image.png' }] },
 }
 
 export default function Contact() {

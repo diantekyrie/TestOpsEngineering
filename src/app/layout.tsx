@@ -40,7 +40,10 @@ export const metadata: Metadata = {
     'TestOps Engineering — QA consulting for startups and mid-size tech companies. Test strategy, automation frameworks, AI/LLM testing, and CI/CD quality gates.',
   keywords:
     'testops, qa consulting, test automation, quality engineering, cicd, ai testing, llm testing, software testing',
+  alternates: { canonical: '/' },
   openGraph: {
+    url: '/',
+    siteName: 'TestOps Engineering',
     title: 'TestOps Engineering — QA & Automation Consulting',
     description:
       'Senior-level QA strategy, automation, and AI-assisted testing for startups and growing tech teams.',
