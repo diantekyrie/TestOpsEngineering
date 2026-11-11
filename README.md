@@ -15,6 +15,7 @@ QA & Automation Consulting website for TestOps Engineering. Built with Next.js 1
 | Fonts | DM Mono · Instrument Serif · DM Sans (via `next/font/google`) |
 | Styling | Global CSS with CSS variables |
 | Forms | FormSubmit.co |
+| Analytics | Vercel Web Analytics (`@vercel/analytics`) |
 
 ---
 
@@ -70,6 +71,11 @@ public/
 - Full-width tap targets for buttons on mobile
 - Terminal widget scrolls horizontally on narrow screens
 - Safe-area aware footer
+
+### Analytics
+- `<Analytics />` from `@vercel/analytics/next` is rendered in `src/app/layout.tsx`, so every page records views
+- Data appears in the Vercel dashboard → **Analytics** tab once this is deployed to production on Vercel
+- Only the Vercel deployment records data (the script isn't served on GitHub Pages); ad blockers also block it
 
 ### SEO / Search Console
 - `metadataBase` set to `https://testopseng.com` for correct OG/canonical tags
