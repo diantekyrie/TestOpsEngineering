@@ -25,7 +25,7 @@ export default function Contact() {
 
         <form
           className="contact-form"
-          action="https://formsubmit.co/YOUR_EMAIL@example.com"
+          action="https://formsubmit.co/contact@testopseng.com"
           method="POST"
         >
           <input type="hidden" name="_subject" value="New TestOps inquiry" />

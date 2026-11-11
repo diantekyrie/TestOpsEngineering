@@ -89,12 +89,12 @@ public/
 
 ### Content
 - [ ] **Replace case study metrics** with real project numbers (flakiness %, velocity, time saved)
-- [ ] **Update the contact form action** — replace `YOUR_EMAIL@example.com` in `src/app/contact/page.tsx` with the real email address
-- [ ] **Update the `_next` redirect URL** in the contact form (`https://testopseng.com/thanks/`) — either create a `/thanks` page or change the redirect destination
+- [x] **Contact form action** — sends to `contact@testopseng.com` (Cloudflare Email Routing forwards it)
+- [x] **`_next` redirect** — points to `https://testopseng.com/thanks`
 - [ ] **Stack section** — remove or add tools to match your actual stack
 
 ### Design / UX
-- [ ] **Add a `/thanks` page** — confirmation page shown after the contact form is submitted
+- [x] **`/thanks` page** — confirmation page after form submit
 - [ ] **Hero stats** — the original design had 4 stat blocks below the CTA buttons; add real numbers or remove the CSS placeholder
 - [ ] **Favicon** — currently uses `testops_image.png`; consider a dedicated `.ico` or smaller square PNG
 
