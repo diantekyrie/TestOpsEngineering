@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
+import SlackNotifier from '@/components/SlackNotifier'
 
 export const metadata: Metadata = {
   title: 'Contact — TestOps Engineering',
@@ -24,6 +25,7 @@ export default function Contact() {
         </section>
 
         <form
+          id="contact-form"
           className="contact-form"
           action="https://formsubmit.co/contact@testopseng.com"
           method="POST"
@@ -32,6 +34,7 @@ export default function Contact() {
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="https://testopseng.com/thanks" />
+          <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
           <input
             type="hidden"
             name="_autoresponse"
@@ -103,6 +106,7 @@ export default function Contact() {
 
           <button className="form-btn" type="submit">Send inquiry</button>
         </form>
+        <SlackNotifier formId="contact-form" />
       </main>
 
       <footer className="contact-footer">

@@ -14,7 +14,7 @@ QA & Automation Consulting website for TestOps Engineering. Built with Next.js 1
 | Domain | testopseng.com (via CNAME) |
 | Fonts | DM Mono · Instrument Serif · DM Sans (via `next/font/google`) |
 | Styling | Global CSS with CSS variables |
-| Forms | FormSubmit.co |
+| Forms | FormSubmit.co (email) + Slack incoming webhook via `api/contact.js` |
 | Analytics | Vercel Web Analytics (`@vercel/analytics`) + Speed Insights (`@vercel/speed-insights`) |
 
 ---
@@ -76,6 +76,11 @@ public/
 - `<Analytics />` and `<SpeedInsights />` are rendered in `src/app/layout.tsx`, so every page records views
 - Data appears in the Vercel dashboard → **Analytics** tab once this is deployed to production on Vercel
 - Only the Vercel deployment records data (the script isn't served on GitHub Pages); ad blockers also block it
+
+### Slack notifications
+- `api/contact.js` is a Vercel serverless function that posts each contact-form submission to Slack
+- The contact page calls it on submit (`src/components/SlackNotifier.tsx`); FormSubmit email delivery is unaffected if Slack fails
+- Needs the `SLACK_WEBHOOK_URL` environment variable in Vercel (Production), then a redeploy
 
 ### SEO / Search Console
 - `metadataBase` set to `https://testopseng.com` for correct OG/canonical tags
